@@ -1,0 +1,16 @@
+<h1>Установленные посты</h1>
+
+<div>
+
+<% @posts.each do |post| %>
+  <div>
+    <%= post.line_name %>
+    №: <%= post.num_tower %>
+    <%= post.net_region %>
+    <%= link_to 'Показать', post_path(post) %>
+  </div>
+<% end %>
+
+</div>
+
+<%= link_to 'Главная', welcome_index_path %> | <%= link_to 'Новый пост', new_post_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_name: MyString
+  num_tower: MyString
+  net_region: MyString
+
+two:
+  line_name: MyString
+  num_tower: MyString
+  net_region: MyString

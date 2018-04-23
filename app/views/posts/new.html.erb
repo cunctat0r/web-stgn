@@ -1,0 +1,23 @@
+<%= form_with scope: :post, url: posts_path, local: true do |form| %>
+  <p>
+    <%= form.label :line_name %></br>
+    <%= form.text_field :line_name %>
+  </p>
+
+  <p>
+    <%= form.label :num_tower %></br>
+    <%= form.text_field :num_tower %>
+  </p>
+
+  <p>
+    <%= form.label :net_region %></br>
+    <%= form.text_field :net_region %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Все посты', posts_path %>

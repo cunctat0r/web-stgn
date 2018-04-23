@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  F0: 1.5
+  F1: 1.5
+  post: one
+
+two:
+  F0: 1.5
+  F1: 1.5
+  post: two

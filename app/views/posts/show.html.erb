@@ -11,4 +11,31 @@
   <%= @post.net_region %>
 </p>
 
-<%= link_to 'Все посты', posts_path %>
+<h2>Результаты измерений:</h2>
+<% @post.measurements.each do |measurement|  %>
+  <p>
+    <strong>Дата: </strong><%= measurement.created_at%>&nbsp;
+    <strong>F0: </strong><%= measurement.F0%> кг,&nbsp;
+    <strong>F1: </strong><%= measurement.F1%> кг
+  <p>
+<% end %>
+
+<h2>Новое измерение:</h2>
+
+<%= form_with model: [@post, @post.measurements.build], local: true do |form|  %>
+<p>
+  <%= form.label :F0 %></br>
+  <%= form.text_field :F0 %>
+</p>
+
+<p>
+  <%= form.label :F1 %></br>
+  <%= form.text_field :F1 %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+
+<% end %>
+
+<%= link_to 'Редактировать', edit_post_path(@post) %> | <%= link_to 'Все посты', posts_path %>

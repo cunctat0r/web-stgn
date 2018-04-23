@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_23_074812) do
+ActiveRecord::Schema.define(version: 2018_04_23_105946) do
+
+  create_table "measurements", force: :cascade do |t|
+    t.float "F0"
+    t.float "F1"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_measurements_on_post_id"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "line_name"
